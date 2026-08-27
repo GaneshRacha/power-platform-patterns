@@ -1,0 +1,22 @@
+{
+  "$schema": "https://example.invalid/power-automate-pattern.schema.json",
+  "title": "Dataverse Business Calendar Engine",
+  "description": "Reusable Dataverse Business Calendar Engine engineering pattern.",
+  "pattern": {
+    "trigger": {
+      "type": "Dataverse",
+      "table": "demo_request"
+    },
+    "guards": [
+      "recordId is not empty",
+      "List rows result length > 0"
+    ],
+    "scopes": [
+      "Try",
+      "Catch",
+      "Finally"
+    ],
+    "idempotencyKey": "demo_correlationkey",
+    "notes": "Illustrative structure only; importable flow definition intentionally omitted."
+  }
+}

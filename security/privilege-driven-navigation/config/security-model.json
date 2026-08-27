@@ -1,0 +1,25 @@
+{
+  "pattern": "Privilege-Driven Model-Driven App Navigation",
+  "summary": "Reusable Privilege-Driven Model-Driven App Navigation engineering pattern.",
+  "personas": {
+    "worker": [
+      "read-owned",
+      "write-owned"
+    ],
+    "supervisor": [
+      "read-team",
+      "write-team",
+      "assign-team"
+    ],
+    "administrator": [
+      "configuration-maintenance"
+    ]
+  },
+  "recordBoundary": "Owner team / business unit security; UI visibility is not a security boundary.",
+  "testCases": [
+    "single role",
+    "combined roles",
+    "direct share",
+    "team reassignment"
+  ]
+}

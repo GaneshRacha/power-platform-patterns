@@ -1,0 +1,12 @@
+// Structured Application Logging Pattern
+// Reusable Structured Application Logging Pattern engineering pattern.
+// Illustrative operational query; adapt table names to the monitoring platform.
+DemoOperations
+| where TimeGenerated > ago(24h)
+| summarize
+    Requests = count(),
+    Failures = countif(Result == "Failure"),
+    P95DurationMs = percentile(DurationMs, 95)
+  by Component
+| extend FailureRate = todouble(Failures) / Requests
+| order by FailureRate desc

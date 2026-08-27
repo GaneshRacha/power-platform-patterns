@@ -1,0 +1,20 @@
+{
+  "pattern": "Business Configuration Table Pattern",
+  "category": "dataverse",
+  "summary": "Reusable Business Configuration Table Pattern engineering pattern.",
+  "entities": [
+    {
+      "logicalName": "demo_parent",
+      "purpose": "transaction or configuration parent"
+    },
+    {
+      "logicalName": "demo_child",
+      "purpose": "related detail/history/configuration"
+    }
+  ],
+  "rules": [
+    "Use explicit relationships and stable business keys.",
+    "Preserve historical references when configuration changes.",
+    "Keep environment-specific values outside source code."
+  ]
+}

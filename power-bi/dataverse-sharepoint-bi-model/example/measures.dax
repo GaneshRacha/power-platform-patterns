@@ -1,0 +1,11 @@
+-- Dataverse + SharePoint Power BI Model
+-- Reusable Dataverse + SharePoint Power BI Model engineering pattern.
+Total Records := COUNTROWS('Fact')
+
+Successful Records :=
+CALCULATE(
+    [Total Records],
+    'Fact'[Outcome] = "Success"
+)
+
+Success Rate := DIVIDE([Successful Records], [Total Records], 0)

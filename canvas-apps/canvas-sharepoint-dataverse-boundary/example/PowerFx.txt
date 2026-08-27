@@ -1,0 +1,13 @@
+// Canvas App SharePoint & Dataverse Boundary
+// Reusable Canvas App SharePoint & Dataverse Boundary engineering pattern.
+// Sanitized Canvas App example.
+With(
+    { currentId: Coalesce(varSelectedId, GUID()) },
+    If(
+        IsBlank(currentId),
+        Notify("A record is required.", NotificationType.Error),
+        Set(varIsBusy, true);
+        // Perform guarded Patch/Collect/navigation logic here.
+        Set(varIsBusy, false)
+    )
+)

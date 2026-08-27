@@ -1,0 +1,20 @@
+{
+  "pattern": "Reference, Configuration & Transaction Data Separation",
+  "category": "dataverse",
+  "summary": "Reusable Reference, Configuration & Transaction Data Separation engineering pattern.",
+  "entities": [
+    {
+      "logicalName": "demo_parent",
+      "purpose": "transaction or configuration parent"
+    },
+    {
+      "logicalName": "demo_child",
+      "purpose": "related detail/history/configuration"
+    }
+  ],
+  "rules": [
+    "Use explicit relationships and stable business keys.",
+    "Preserve historical references when configuration changes.",
+    "Keep environment-specific values outside source code."
+  ]
+}

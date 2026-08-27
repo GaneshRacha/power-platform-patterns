@@ -1,0 +1,22 @@
+# Source-Controlled Web Resource Structure
+# Reusable Source-Controlled Web Resource Structure engineering pattern.
+trigger:
+  branches:
+    include: [ main ]
+
+stages:
+- stage: Validate
+  jobs:
+  - job: StaticChecks
+    steps:
+    - checkout: self
+    - script: echo "Validate source, solution dependencies, and version contracts"
+      displayName: Validate engineering artifacts
+
+- stage: Package
+  dependsOn: Validate
+  jobs:
+  - job: PackageSolution
+    steps:
+    - script: echo "Package managed solution / component artifact"
+      displayName: Package

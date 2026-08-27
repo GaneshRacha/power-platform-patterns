@@ -1,0 +1,25 @@
+{
+  "pattern": "Team-Based Data Security Architecture",
+  "summary": "Reusable Team-Based Data Security Architecture engineering pattern.",
+  "personas": {
+    "worker": [
+      "read-owned",
+      "write-owned"
+    ],
+    "supervisor": [
+      "read-team",
+      "write-team",
+      "assign-team"
+    ],
+    "administrator": [
+      "configuration-maintenance"
+    ]
+  },
+  "recordBoundary": "Owner team / business unit security; UI visibility is not a security boundary.",
+  "testCases": [
+    "single role",
+    "combined roles",
+    "direct share",
+    "team reassignment"
+  ]
+}

@@ -1,0 +1,11 @@
+-- Dataverse Operational Dashboard
+-- Reusable Dataverse Operational Dashboard engineering pattern.
+Total Records := COUNTROWS('Fact')
+
+Successful Records :=
+CALCULATE(
+    [Total Records],
+    'Fact'[Outcome] = "Success"
+)
+
+Success Rate := DIVIDE([Successful Records], [Total Records], 0)

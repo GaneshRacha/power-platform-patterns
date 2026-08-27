@@ -1,0 +1,22 @@
+{
+  "$schema": "https://example.invalid/power-automate-pattern.schema.json",
+  "title": "Safe First-Match Selection in Power Automate",
+  "description": "Reusable Safe First-Match Selection in Power Automate engineering pattern.",
+  "pattern": {
+    "trigger": {
+      "type": "Dataverse",
+      "table": "demo_request"
+    },
+    "guards": [
+      "recordId is not empty",
+      "List rows result length > 0"
+    ],
+    "scopes": [
+      "Try",
+      "Catch",
+      "Finally"
+    ],
+    "idempotencyKey": "demo_correlationkey",
+    "notes": "Illustrative structure only; importable flow definition intentionally omitted."
+  }
+}
