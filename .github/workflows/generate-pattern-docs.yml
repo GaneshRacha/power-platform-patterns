@@ -1,0 +1,35 @@
+name: Generate pattern documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/generate_pattern_docs.py'
+      - '*/README.md'
+      - '.github/workflows/generate-pattern-docs.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate implementation folders
+        run: python scripts/generate_pattern_docs.py
+
+      - name: Commit generated documentation
+        run: |
+          if git diff --quiet && [ -z "$(git status --porcelain)" ]; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Generate implementation documentation folders"
+          git push
