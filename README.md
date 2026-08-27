@@ -6,13 +6,34 @@ Live portfolio: https://power-platform-portfolio-olive.vercel.app/
 
 ## Flagship source implementations
 
-These patterns include real sanitized source/configuration in addition to documentation:
+These patterns include meaningful sanitized source/configuration in addition to documentation.
+
+### Component & client engineering
 
 - [Generic Record Selector PCF](pcf/generic-record-selector-pcf/) — TypeScript models, Dataverse repository layer, architecture, and testing guidance
 - [Dynamic Dataverse Lookup Filtering](javascript/dynamic-lookup-filtering/) — reusable Model-Driven App lookup filtering source
 - [Status-Based Field Locking](javascript/status-based-field-locking/) — configurable lifecycle-driven UI locking helper
+- [Dataverse Web API Utility Library](javascript/dataverse-web-api-utility-library/) — GUID, lookup, OData, paging, and retrieval helpers
+
+### Server-side & integration engineering
+
+- [Cross-Record Synchronization Plugin](plugins/cross-record-synchronization-plugin/) — C# synchronization logic, eligibility rules, query minimization, and registration guidance
+- [Parent/Child Calculation Plugin](plugins/parent-child-calculation-plugin/) — PreOperation calculation from structured child input
 - [Secure Service Integration](custom-api/secure-service-integration/) — C# HTTPS/allowlist service gateway and Custom API contract
+- [External REST API Integration](integration/external-rest-api-integration/) — reusable HTTP client with correlation IDs and controlled integration errors
+
+### Dataverse, process & automation architecture
+
+- [Effective-Dated Configuration](dataverse/effective-dated-configuration/) — sample schema, overlap/single-active rules, and historical lookup preservation
+- [Configuration-Driven Status & BPF](architecture/configuration-driven-status-bpf/) — portable process/stage configuration example
+- [Dataverse Business Calendar Engine](power-automate/business-calendar-engine/) — persisted calendar contract and ingestion/consumer design
+- [Defensive Dataverse Record ID Handling](power-automate/defensive-dataverse-recordid-flow/) — guarded `List rows`, safe `first()`, error scopes, and idempotency guidance
+
+### Security & ALM
+
+- [Team-Based Data Security](security/team-based-data-security/) — owner-team architecture, role scope matrix, and role-combination guidance
 - [Dataverse Solution Import Troubleshooting](alm/solution-import-troubleshooting/) — structured ALM diagnosis and recovery playbook
+- [PCF Deployment & Version Management](alm/pcf-version-management/) — manifest/release version verification script and contract guidance
 
 ## Why this repository exists
 
