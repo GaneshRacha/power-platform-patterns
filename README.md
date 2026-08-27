@@ -2,7 +2,9 @@
 
 A public-safe library of **136 reusable engineering patterns** across Microsoft Power Platform, Dataverse, PCF, C# plugins, Custom APIs, Power Automate, Azure integration, analytics, ALM, security, and production engineering.
 
-Live portfolio: https://power-platform-portfolio-olive.vercel.app/
+**Live portfolio:** https://power-platform-portfolio-olive.vercel.app/  
+**10-minute reviewer path:** [Start here](docs/start-here.md)  
+**Visual architecture:** [Architecture atlas](docs/architecture-atlas.md)
 
 ## Repository depth
 
