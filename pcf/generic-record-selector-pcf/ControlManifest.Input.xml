@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control namespace="Demo.Controls" constructor="GenericRecordSelector" version="1.0.0" display-name-key="GenericRecordSelector" description-key="GenericRecordSelector_Description" control-type="standard">
+    <property name="value" display-name-key="Value" description-key="Selected value payload" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="sourceTable" display-name-key="Source Table" description-key="Logical name of the selectable Dataverse table" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="sourceIdColumn" display-name-key="Source ID Column" description-key="Primary key column" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="sourceLabelColumn" display-name-key="Source Label Column" description-key="Display label column" of-type="SingleLine.Text" usage="input" required="true" />
+    <resources>
+      <code path="index.ts" order="1" />
+    </resources>
+    <feature-usage>
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
