@@ -1,0 +1,29 @@
+[
+  {
+    "recordTypeCode": "TYPE-A",
+    "statusCode": 100000000,
+    "statusName": "Received",
+    "processName": "Standard Request Process",
+    "stageName": "Intake",
+    "displayOrder": 10,
+    "isActive": true
+  },
+  {
+    "recordTypeCode": "TYPE-A",
+    "statusCode": 100000001,
+    "statusName": "In Review",
+    "processName": "Standard Request Process",
+    "stageName": "Review",
+    "displayOrder": 20,
+    "isActive": true
+  },
+  {
+    "recordTypeCode": "TYPE-B",
+    "statusCode": 100000000,
+    "statusName": "Received",
+    "processName": "Alternate Request Process",
+    "stageName": "Registration",
+    "displayOrder": 10,
+    "isActive": true
+  }
+]
